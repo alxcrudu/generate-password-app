@@ -106,5 +106,7 @@ function copyToClipboard() {
         setTimeout(() => {
             copyToClipboardElement.innerText = "Copy to clipboard"
         }, 3000)
-    } return
+    } return;
 };
+
+// test
