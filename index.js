@@ -108,5 +108,3 @@ function copyToClipboard() {
         }, 3000)
     } return;
 };
-
-// testing 
