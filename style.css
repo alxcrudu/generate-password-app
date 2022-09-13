@@ -24,6 +24,7 @@ body {
   background-color: rgb(0, 0, 0);
   border-radius: 6px;
   padding: 2rem;
+  max-width: 90vw;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -40,6 +41,7 @@ body {
   column-gap: 3rem;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 #lengthSelectorNumber {
@@ -59,7 +61,7 @@ body {
   background-color: white;
   color: white;
   background: linear-gradient(to right, rgb(15, 0, 44), rgb(37, 0, 105));
-  width: 350px;
+  width: 100%;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 40px;
@@ -85,6 +87,7 @@ body {
   background: linear-gradient(to right, rgb(15, 0, 44), rgb(37, 0, 105));
   color: white;
   border: 0.5px solid rgba(255, 255, 255, 0.1);
+  margin-top: 1rem;
 }
 
 #copyToClipboard {
@@ -105,4 +108,21 @@ body {
 
 .toggleShow:hover {
     opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+      padding: 1rem;
+      width: 80vw;
+    }
+    #lengthSelectorRange {
+      width: 6rem;
+    }
+}
+
+@media screen and (max-width: 360px)  {
+    .span-2 {
+      grid-column: span 2;
+      justify-content: flex-start;
+    }
 }
