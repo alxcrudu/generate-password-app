@@ -60,6 +60,7 @@ form.addEventListener("submit", (e) => {
       includeSymbols
     );
     passwordText.innerText = password;
+    copyToClipboard();
   }
   // console.log(password)
 });
@@ -98,13 +99,19 @@ function createArr(from, to) {
 // copy to clipboard
 
 copyToClipboardElement.addEventListener("click", copyToClipboard);
+copyToClipboardElement.addEventListener("submit", copyToClipboard);
 
 function copyToClipboard() {
     if (passwordText.innerText !== "password") {
-        navigator.clipboard.writeText(passwordText.innerText);
-        copyToClipboardElement.innerText = "Copied!"
-        setTimeout(() => {
-            copyToClipboardElement.innerText = "Copy to clipboard"
-        }, 3000)
+        navigator.clipboard.writeText(passwordText.innerText).then(() => {
+            copyToClipboardElement.innerText = "Copied!"
+            setTimeout(() => {
+                copyToClipboardElement.innerText = "Copy to clipboard"
+            }, 3000)
+            console.log("copied")
+        }) .catch(() => {
+            alert("Oops! Not able to copy to clipboard")
+            console.log("not copied")
+        })
     } return;
 };

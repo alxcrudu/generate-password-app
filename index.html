@@ -5,19 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password generator</title>
-    <script src="/index.js" defer></script>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="container">
         <h1 class="title">Generate password</h1>
         <div id="passwordDisplay">
             <p id="passwordText">password</p>
-            <button id="copyToClipboard" class="toggleShow">Copy to clipboard</button>
+            <button type="submit" id="copyToClipboard" class="toggleShow">Copy to clipboard</button>
         </div>
         <form id="form">
-            <label class= "span-2" for="lengthSelectorNumber">Number of characters</label>
-            <div class="lengthSelectorContainer span-2">
+            <label for="lengthSelectorNumber">Number of characters</label>
+            <div class="lengthSelectorContainer">
                 <input type="range" id="lengthSelectorRange" min="1" max="50" value="15">
                 <input type="number" id="lengthSelectorNumber" min="1" max="50" value="15">
             </div>
@@ -34,5 +33,6 @@
             <button type="submit" id="btn">Generate Password</button>
         </form>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
